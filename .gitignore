@@ -1,9 +1,11 @@
-# Virtual environment
-venv/
+# ============================================================
+# PYTHON / ENVIRONMENT
+# ============================================================
 
-# Python
+venv/
 __pycache__/
 *.pyc
+.env
 
 # macOS
 .DS_Store
@@ -11,16 +13,24 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Raw dataset
+
+# ============================================================
+# DATASET
+# ============================================================
+
+# Original dataset
 data/raw/
 
-# Large/generated preprocessing files
+# Large generated NumPy arrays
 data/processed/*.npy
-data/processed/*.pkl
+
+# Cleaned corpora can also be regenerated
 data/processed/*_clean.txt
 
-# Trained models
-models/
 
-# Environment variables
-.env
+# ============================================================
+# OPTIONAL LARGE GENERATED FILES
+# ============================================================
+
+# Keep tokenizer if you want reproducible prediction demos.
+# So DO NOT ignore *.pkl here.
